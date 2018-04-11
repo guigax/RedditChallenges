@@ -1,0 +1,56 @@
+<html>
+    <head> 
+        <title>Challenge 004 - Cipher</title>
+
+        <script src="randomPassword.js"></script>
+
+        <style>
+            textarea {
+                resize: none;
+            }
+            
+            .disabled {
+                opacity: 0.5;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <form name="info">
+            <div>
+                <div class="disabled">
+                    <input type="checkbox" name="lowercase" value="lowercase" onclick="return false;" checked> lowercase<br />
+                </div>
+                <input type="checkbox" name="uppercase" value="uppercase"> UPPERCASE <br />
+                <input type="checkbox" name="number" value="number"> Numb3rs <br />
+                <input type="checkbox" name="special" value="special"> $peci@l <br />
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <label for="size">Size of the passwords:</label>
+                <br />
+                <input name="size" value="12" type="number" autocomplete="off" />
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <label for="amount">Amount of passwords to generate:</label>
+                <br />
+                <input name="amount" value="1" type="number" autocomplete="off" />
+            </div>
+
+            <br />
+            <br />
+
+            <input name="submitInfo" value="Generate" type="button" onclick="randomPasswordList();" />
+        </form>
+
+        <textarea name="results" rows="20" cols="60" disabled></textarea>
+    </body>
+</html>
