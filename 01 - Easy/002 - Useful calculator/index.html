@@ -1,0 +1,63 @@
+<html>
+    <head> 
+        <title>Challenge 002 - Useful calculator</title>
+
+        <script src="calculator.js"></script>
+
+        <style>
+            span{
+                color:#eaeaea;
+            }
+
+            input[type="number"]:read-only{
+                background-color: #d4d4d4;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form name="info">
+            <div>
+                <label for="name">Which one to calculate:</label>
+                <br />
+                <input type="radio" name="choice" value="acceleration"> Acceleration <span>a = F / m</span> <br />
+                <input type="radio" name="choice" value="force"> Force <span>F = m * a</span> <br />
+                <input type="radio" name="choice" value="mass"> Mass <span>m = F / a</span>
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <label for="acceleration">Acceleration:</label>
+                <br />
+                <input name="acceleration" value="" placeholder="m/s²" type="number" autocomplete="off" readonly />
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <label for="force">Force:</label>
+                <br />
+                <input name="force" value="" placeholder="N" type="number" autocomplete="off" readonly />
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <label for="mass">Mass:</label>
+                <br />
+                <input name="mass" value="" placeholder="Kg" type="number" autocomplete="off" readonly />
+            </div>
+
+            <br />
+            <br />
+
+            <input name="submitInfo" value="Calculate" type="button" onclick="returnCalculatedValue();" readonly />
+        </form>
+
+        <p id="result"></p>
+    </body>
+</html>

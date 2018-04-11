@@ -1,0 +1,42 @@
+<html>
+    <head> 
+        <title>Challenge 001 - Save User Info</title>
+
+        <script src="userInfo.js"></script>
+    </head>
+
+    <body>
+        <form name="info">
+            <div>
+                <label for="name">Name:</label>
+                <br />
+                <input name="name" value="" placeholder="Write your name" type="text" autocomplete="off" />
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <label for="age">Age:</label>
+                <br />
+                <input name="age" value="" placeholder="Write your age" type="number" autocomplete="off" />
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <label for="redditUsername">Reddit Username:</label>
+                <br />
+                <input name="redditUsername" value="" placeholder="Write your Reddit Username" type="text" autocomplete="off" />
+            </div>
+
+            <br />
+            <br />
+
+            <input name="submitInfo" value="Save" type="button" onclick="returnChallenge001Phrase();" />
+        </form>
+
+        <p id="resultPhrase"></p>
+    </body>
+</html>

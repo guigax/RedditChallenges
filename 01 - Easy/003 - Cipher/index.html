@@ -1,0 +1,43 @@
+<html>
+    <head> 
+        <title>Challenge 003 - Cipher</title>
+
+        <script src="cipher.js"></script>
+    </head>
+
+    <body>
+        <form name="info">
+            <div>
+                <label for="original">Word to encrypt:</label>
+                <br />
+                <input name="original" value="" type="text" autocomplete="off" onkeyup="allLetter(this)" />
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <label for="encrypted">Encrypted word:</label>
+                <br />
+                <input name="encrypted" value="" type="text" autocomplete="off" disabled/>
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <label for="decrypted">Decrypted word:</label>
+                <br />
+                <input name="decrypted" value="" type="text" autocomplete="off" disabled/>
+            </div>
+
+            <br />
+            <br />
+
+            <input name="submitInfo" value="Encrypt" type="button" onclick="encrypt();" />
+            <input name="submitInfo" value="Decrypt" type="button" onclick="decrypt();" />
+        </form>
+
+        <p id="resultPhrase"></p>
+    </body>
+</html>
