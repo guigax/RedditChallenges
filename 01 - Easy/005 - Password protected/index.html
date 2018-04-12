@@ -1,0 +1,37 @@
+<html>
+    <head> 
+        <title>Challenge 005 - Password protected</title>
+
+        <script src="passwordProtected.js"></script>
+
+        <style>
+        </style>
+
+    </head>
+
+    <body>
+        <form name="info">
+            <div>
+                <label for="username">Username:</label>
+                <br />
+                <input name="username" value="" type="text" autocomplete="off" />
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <label for="password">Password:</label>
+                <br />
+                <input name="password" value="" type="password" />
+            </div>
+
+            <br />
+            <br />
+
+            <input name="submitInfo" value="Login" type="button" onclick="verifyLogin();" />
+        </form>
+
+        <p class="resultP"></p>
+    </body>
+</html>
