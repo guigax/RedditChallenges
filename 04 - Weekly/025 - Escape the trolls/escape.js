@@ -3,6 +3,8 @@ window.onload = function() {
 };
 
 function setValue(){
+    
+    // create maze
     var maze = '#########################################################################<br/>'+
                '#   #               #               #           #                   #   #<br/>'+
                '#   #   #########   #   #####   #########   #####   #####   #####   #   #<br/>'+
@@ -28,17 +30,19 @@ function setValue(){
                '# X #####################################################################<br/>';
 
     var spaceOccurences = [];
-
     spaceOccurences = getPositionsOfCharInString(maze, ' ');
 
-    console.log(maze);
-    console.log(spaceOccurences);
+    // set the hero to a random space on the maze
+    maze = setCharAt(maze, spaceOccurences[getRandomInt(0, spaceOccurences.length - 1)], '●');
     
-    maze = setCharAt(maze, spaceOccurences[getRandomInt(0, spaceOccurences.length - 1)], '<i>●</i>');
-    
+    // change space to html to fit editable div content
     var formattedMaze = maze.replace(/\s/g, '&nbsp;');
 
-    formattedMaze = formattedMaze.replace(/X/g, '<span class=\'exitPoint\'>X</span>');
+    // add css class to exit point
+    formattedMaze = formattedMaze.replace(/X/g, '<span class=\'exitBlink exitPoint\'>X</span>');
+
+    // add css class to hero
+    formattedMaze = formattedMaze.replace(/●/g, '<span class=\'heroBlink hero\'>●</span>');
 
     document.getElementsByName('maze')[0].innerHTML = formattedMaze;
 }

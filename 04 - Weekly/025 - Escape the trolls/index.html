@@ -17,12 +17,6 @@
                 margin: 0;
             }
 
-            /* hero */
-            i{
-                color: #2282b9;
-                font-style: normal;
-            }
-
             .container{
                 display: flex;
                 justify-content: center;
@@ -37,12 +31,31 @@
                 outline: none;
             }
 
+            .hero{
+                color: #2282b9;
+                font-style: normal;
+            }
+
             .exitPoint {
                 color: #01bb01;
             }
 
             .enemy{
                 color: #b10909;
+            }
+
+            .exitBlink {
+                animation: blinker 5s linear infinite;
+            }
+
+            .heroBlink {
+                animation: blinker 0.7s linear infinite;
+            }
+
+            @keyframes blinker {
+                50% {
+                    opacity: 0;
+                }
             }
         </style>
 
