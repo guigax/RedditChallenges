@@ -34,7 +34,7 @@ function setValue(){
     console.log(maze);
     console.log(spaceOccurences);
     
-    maze = setCharAt(maze, spaceOccurences[getRandomInt(0, spaceOccurences.length - 1)], '<i>O</i>');
+    maze = setCharAt(maze, spaceOccurences[getRandomInt(0, spaceOccurences.length - 1)], '<i>●</i>');
     
     var formattedMaze = maze.replace(/\s/g, '&nbsp;');
 
